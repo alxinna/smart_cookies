@@ -1,6 +1,5 @@
 class Question:
-    def __init__(self, question_id, name, description):
+    def __init__(self, question_id, question, answers):
         self.question_id = question_id
-        self.name = name
-        self.description = description
+        self.question = question
         self.answers = answers

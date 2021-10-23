@@ -106,15 +106,27 @@
 </head>
 <body>
 <div class="navigation">
-    <img src="newlogo.png" height="70px" width="150px">
+    <img src="/static/newlogo.png" height="70px" width="150px">
     <a class="active" href="#home">About us</a>
     <a href="#news">Vocabulary tests</a>
     <a href="#contact">Grammar tests</a>
     <a href="#about">Login</a>
 </div>
 <div class="main">
-    <div class = "header">15 Minutes test to estimate English level</div>
-    <div class = "test_content">She arrived at 8 p.m., opened the door and shouted "Good ......!"</div>
+    <div class = "header">{{test.name}}</div>
+    <div class = "header">{{test.description}}</div>
+    <div class = "test_content">
+        <form method="post">
+            {% for question in test.questions %}
+            <div><p>{{ question.question }}</p></div>
+                {% for answer in question.answers %}
+                    <input type="radio" id="{{ answer.id }}" name="{{ question.question_id }}" value="{{ answer.id }}" >
+                    <label for="{{ answer.id }}">{{ answer.answer }}</label>
+                 {% endfor %}
+            {% endfor %}
+            <input type="submit" value="test_results" name="test_results">
+        </form>
+    </div>
 
 </div>
 </body>
