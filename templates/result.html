@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart cookies</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+        .navigation {
+            background: white;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            justify-content: center;
+        }
+        .header > a {
+            color: #d74876;
+        }
+
+        .main {
+            background: pink;
+            height: 87vh;
+            width: 100vw;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+
+        .header{
+            background: white;
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+            height: 20%;
+            width: 60%;
+            font-size: 40px;
+            position: absolute;
+            border: 5px solid black;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .navigation > a,
+        .navigation > a:hover,
+        .navigation > a:focus,
+        .navigation > a:active {
+            text-decoration: none;
+            text-align: center;
+            color: #d74876;
+            padding-right: 30px;
+            padding-left: 80px;
+        }
+
+        body {
+            font-family: 'Birthstone', cursive;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="navigation">
+    <img src="/static/newlogo.png" height="70px" width="150px">
+    <a class="active" href="#home">About us</a>
+    <a href="#news">Vocabulary tests</a>
+    <a href="#test">Grammar tests</a>
+    <a href="#login">Login</a>
+</div>
+<div class="main">
+    <div class = "header">Your final score is </br> {{result_information}}% </br>  <a href="/about_us">Let's see how we can help you improve your English</a></div>
+
+</div>
+</body>
+</html>

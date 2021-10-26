@@ -23,33 +23,33 @@ class DatabaseManager:
     def insert_data(self):
         query_for_tests = db.insert(self.tests)
         tests_data = [
-            {'Id': '1', 'name': '15 Minutes Test', 'description': 'Take just 15 minutes to estimate your Enlish level'},
-            {'Id': '2', 'name': 'Present Simple Test',
+            {'id': '1', 'name': '15 Minutes Test', 'description': 'Take just 15 minutes to estimate your Enlish level'},
+            {'id': '2', 'name': 'Present Simple Test',
              'description': 'Grammar test about Present Simple negative,statements and questions'},
-            {'Id': '3', 'name': 'Past Simple Test',
+            {'id': '3', 'name': 'Past Simple Test',
              'description': 'Grammar test about Past Simple negative,statements and questions'}]
         self.engine.execute(query_for_tests, tests_data)
         query_for_questions = db.insert(self.questions)
-        questions_data = [{'Id': '1', 'test_id': 1,
+        questions_data = [{'id': '1', 'test_id': 1,
                            'question': 'She arrived at 8 p.m., opened the door and shouted "Good ......!'},
-                          {'Id': '2', 'test_id': 1,
+                          {'id': '2', 'test_id': 1,
                            'question': 'They have been married for over fifty years, but she still remembers the day she first ......'},
-                          {'Id': '3', 'test_id': 2, 'question': 'I ..... to school.'},
-                          {'Id': '4', 'test_id': 3, 'question': 'Yesterday we ....... swimming.'}]
+                          {'id': '3', 'test_id': 2, 'question': 'I ..... to school.'},
+                          {'id': '4', 'test_id': 3, 'question': 'Yesterday we ....... swimming.'}]
         self.engine.execute(query_for_questions, questions_data)
         query_for_answers = db.insert(self.answers)
-        answer_data = [{'Id': '1', 'question_id': 1, 'answer': 'morning', 'true_answer': False},
-                       {'Id': '2', 'question_id': 1, 'answer': 'evening', 'true_answer': True},
-                       {'Id': '3', 'question_id': 1, 'answer': 'bye', 'true_answer': False},
-                       {'Id': '4', 'question_id': 1, 'answer': 'afternoon', 'true_answer': False},
-                       {'Id': '5', 'question_id': 2, 'answer': 'keen on him', 'true_answer': False},
-                       {'Id': '6', 'question_id': 2, 'answer': 'stuck on him', 'true_answer': False},
-                       {'Id': '7', 'question_id': 2, 'answer': 'fell for him', 'true_answer': True},
-                       {'Id': '8', 'question_id': 2, 'answer': 'wed him', 'true_answer': False},
-                       {'Id': '9', 'question_id': 3, 'answer': 'go', 'true_answer': True},
-                       {'Id': '10', 'question_id': 3, 'answer': 'goes', 'true_answer': False},
-                       {'Id': '11', 'question_id': 3, 'answer': 'went', 'true_answer': False},
-                       {'Id': '12', 'question_id': 3, 'answer': 'have gone', 'true_answer': False}]
+        answer_data = [{'id': '1', 'question_id': 1, 'answer': 'morning', 'true_answer': False},
+                       {'id': '2', 'question_id': 1, 'answer': 'evening', 'true_answer': True},
+                       {'id': '3', 'question_id': 1, 'answer': 'bye', 'true_answer': False},
+                       {'id': '4', 'question_id': 1, 'answer': 'afternoon', 'true_answer': False},
+                       {'id': '5', 'question_id': 2, 'answer': 'keen on him', 'true_answer': False},
+                       {'id': '6', 'question_id': 2, 'answer': 'stuck on him', 'true_answer': False},
+                       {'id': '7', 'question_id': 2, 'answer': 'fell for him', 'true_answer': True},
+                       {'id': '8', 'question_id': 2, 'answer': 'wed him', 'true_answer': False},
+                       {'id': '9', 'question_id': 3, 'answer': 'go', 'true_answer': True},
+                       {'id': '10', 'question_id': 3, 'answer': 'goes', 'true_answer': False},
+                       {'id': '11', 'question_id': 3, 'answer': 'went', 'true_answer': False},
+                       {'id': '12', 'question_id': 3, 'answer': 'have gone', 'true_answer': False}]
         self.engine.execute(query_for_answers, answer_data)
 
     def get_test(self, name_of_test):
