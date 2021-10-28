@@ -83,6 +83,7 @@ def main_test():
 def about_us():
     return render_template('about_us.html')
 
+
 @app.route('/vocabulary', methods=['GET', 'POST'])
 def vocabulary():
     if request.method == 'POST':
@@ -93,6 +94,7 @@ def vocabulary():
 
         return render_template('result.html', result_information=result_information)
     return render_template('test.html', test=vocabulary_test)
+
 
 @app.route('/grammar', methods=['GET', 'POST'])
 def grammar():
