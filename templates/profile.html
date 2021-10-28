@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="header">Welcome, {{ username }}!</div>
+    {% if made_test %}
+        <div class="box">
+        {% for testname,score in made_test.items() %}
+            <p>
+                {{ testname }} (Score: {{ score }})
+            </p>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock %}

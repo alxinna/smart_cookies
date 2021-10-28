@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class = "header">{{test.name}}</div>
+    <div class = "description">{{test.description}}</div>
+    <form method="post">
+        <div class = "questions">
+        {% for question in test.questions %}
+            <div class = "test_content"><p>{{ loop.index }}) {{ question.question }}</p>
+                {% for answer in question.answers %}
+                <input type="radio" id="{{ answer.id }}" name="{{ question.question_id }}" value="{{ answer.id }}" >
+                    <label for="{{ answer.id }}">{{ answer.answer }}</label> </br>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        </div>
+        <input type="submit" class="button_test" value="Finish" name="test_results">
+
+    </form>
+{% endblock %}
