@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3 class="title">Login</h3>
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/login">
+            <div class="center">
+            <input class="input" type="email" name="email" placeholder="Your Email" autofocus="">
+            <input class="input" type="password" name="password" placeholder="Your Password">
+            <label>
+                <input type="checkbox">
+                Remember me
+            </label>
+            <button class="button">Login</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

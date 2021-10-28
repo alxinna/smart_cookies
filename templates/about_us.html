@@ -1,102 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Smart cookies</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Abel&family=Lobster+Two&family=Satisfy&display=swap');
+{% extends "base.html" %}
 
-        .navigation {
-            background: white;
-            display: flex;
-            align-items: center;
-            font-size: 30px;
-            justify-content: center;
-        }
-
-        .main {
-            width: 100vw;
-            text-align: center;
-            position: relative;
-            float: left;
-        }
-
-        .header {
-            padding-top: 10px;
-            display: inline-block;
-            margin-bottom: 20px;
-            height: 10%;
-            width: 60%;
-            font-size: 40px;
-            text-align: left;
-        }
-
-        .description {
-            padding-top: 10px;
-            background: white;
-            display: inline-block;
-            margin-bottom: 20px;
-            height: 10%;
-            width: 60%;
-            font-size: 25px;
-            border: 5px solid #F5A9BC;
-        }
-        .test_content {
-            background: white;
-            display: inline-block;
-            margin-bottom: 20px;
-            width: 60%;
-            font-size: 20px;
-            border: 5px solid #F5A9BC;
-        }
-
-        .navigation > a,
-        .navigation > a:hover,
-        .navigation > a:focus,
-        .navigation > a:active {
-            text-decoration: none;
-            text-align: center;
-            color: #d74876;
-            padding-right: 30px;
-            padding-left: 80px;
-        }
-
-        body {
-            font-family: 'Birthstone', cursive;
-            margin: 0;
-        }
-
-        .text {
-            padding-top: 10px;
-            display: inline-block;
-            margin-bottom: 20px;
-            height: 10%;
-            width: 60%;
-            font-size: 27px;
-            text-align: left;
-            float: left;
-            margin-left: 20px;
-        }
-
-
-    </style>
-</head>
-<body>
-<div class="navigation">
-    <img src="/static/newlogo.png" height="70px" width="150px">
-    <a class="active" href="#home">About us</a>
-    <a href="#news">Vocabulary tests</a>
-    <a href="#contact">Grammar tests</a>
-    <a href="#about">Login</a>
-</div>
-<div class="main">
-    <div class="header">Learn English</div>
+{% block content %}
+    <div class="about_us">
+        <div class="header_about_us">Learn English</div>
     <div class="text">Learn English at an English language school and get comfortable speaking the world's language.
         Spend a few weeks or months attending full-time English courses with an engaging teacher.
         If you can't spare the time to attend class, why not take advantage of our online English school?
         Whatever your goals, our English learning programs will get you there.
-        Get in touch so we can discuss your options.</div>
-</div>
+        Get in touch so we can discuss your options. </br>
 
-</body>
-</html>
+        E-mail: course@smartcookies.ua
+    </div>
+    <div class="header_about_us">Programs we offer:</div>
+    <div class="programm_item">
+        <img class="programm_image" src="/static/istockphoto-839295596-170667a.jpg" alt="">
+        <div class="programm_content">
+            <h4>Full course for Kids</h4>
+            <b>Age: 10-14 Time: 6,9 or 12 Months</b>
+            <p>Learn English online and improve your skills through our high-quality courses. Made fun for Kids.</p>
+        </div>
+    </div>
+    <div class="programm_item">
+        <img class="programm_image" src="/static/istockphoto-1298022621-170667a.jpg" alt="">
+        <div class="programm_content">
+            <h4>Full course for Teens</h4>
+            <b>Age: 14-18 Time: 6,9 or 12 Months</b>
+            <p>Learn English online and improve your skills through our high-quality courses. Tailored for Teens.</p>
+        </div>
+    </div>
+    <div class="programm_item">
+        <img class="programm_image" src="/static/istockphoto-1295057612-170667a.jpg" alt="">
+        <div class="programm_content">
+            <h4>Full course for young Adults</h4>
+            <b>Age: 18-25 Time: 6,9 or 12 Months</b>
+            <p>Learn English online and improve your skills through our high-quality courses. Tailored for young Adults.</p>
+        </div>
+    </div>
+    <div class="programm_item">
+        <img class="programm_image" src="/static/istockphoto-1254127323-170667a.jpg" alt="">
+        <div class="programm_content">
+            <h4>Full course for Adults</h4>
+            <b>Age: 25+ Time: 6,9 or 12 Months</b>
+            <p>Learn English online and improve your skills through our high-quality courses. Tailored for Adults.</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

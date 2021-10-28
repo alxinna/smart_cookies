@@ -1,107 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Smart cookies</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Abel&family=Lobster+Two&family=Satisfy&display=swap');
+{% extends "base.html" %}
 
-        .navigation {
-            background: white;
-            display: flex;
-            align-items: center;
-            font-size: 30px;
-            justify-content: center;
-        }
-
-        .main {
-            background: pink;
-            width: 100vw;
-            text-align: center;
-            position: relative;
-            float: left;
-        }
-
-        .header {
-            padding-top: 10px;
-            background: white;
-            display: inline-block;
-            margin-bottom: 20px;
-            height: 10%;
-            width: 60%;
-            font-size: 40px;
-            border: 5px solid black;
-        }
-
-        .description {
-            padding-top: 10px;
-            background: white;
-            display: inline-block;
-            margin-bottom: 20px;
-            height: 10%;
-            width: 60%;
-            font-size: 25px;
-            border: 5px solid #F5A9BC;
-        }
-        .test_content {
-            background: white;
-            display: inline-block;
-            margin-bottom: 20px;
-            width: 60%;
-            font-size: 20px;
-            border: 5px solid #F5A9BC;
-        }
-
-        .navigation > a,
-        .navigation > a:hover,
-        .navigation > a:focus,
-        .navigation > a:active {
-            text-decoration: none;
-            text-align: center;
-            color: #d74876;
-            padding-right: 30px;
-            padding-left: 80px;
-        }
-
-        body {
-            font-family: 'Birthstone', cursive;
-            margin: 0;
-        }
-
-        .questions {
-            font-family: 'Lobster Two', cursive;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            text-align: left;
-            flex-direction: column;
-        }
-
-        .button {
-            border: 5px solid #f38fa9;
-            background: #ff91af;
-            color: black;
-            font-weight: bold;
-            padding: 12px 28px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: auto;
-            cursor: pointer;
-        }
-
-    </style>
-</head>
-<body>
-<div class="navigation">
-    <img src="/static/newlogo.png" height="70px" width="150px">
-    <a class="active" href="#home">About us</a>
-    <a href="#news">Vocabulary tests</a>
-    <a href="#contact">Grammar tests</a>
-    <a href="#about">Login</a>
-</div>
-<div class="main">
+{% block content %}
     <div class = "header">{{test.name}}</div>
     <div class = "description">{{test.description}}</div>
     <form method="post">
@@ -115,10 +14,7 @@
             </div>
         {% endfor %}
         </div>
-        <input type="submit" class="button" value="Finish" name="test_results">
+        <input type="submit" class="button_test" value="Finish" name="test_results">
 
     </form>
-    </div>
-
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart cookies</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abel&family=Lobster+Two&family=Satisfy&display=swap');
+
+        .navigation {
+            background: white;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            justify-content: center;
+        }
+
+        .main {
+            background: pink;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+
+        .test {
+            background: white;
+            display: inline-block;
+            margin: auto;
+            height: 65%;
+            width: 60%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border: 5px solid #F5A9BC;
+        }
+
+        .test > a,
+        .test > a:hover,
+        .test > a:focus,
+        .test > a:active {
+            padding: 10px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .navigation > a,
+        .navigation > a:hover,
+        .navigation > a:focus,
+        .navigation > a:active {
+            text-decoration: none;
+            text-align: center;
+            color: #d74876;
+            padding-right: 30px;
+            padding-left: 80px;
+        }
+
+        body {
+            font-family: 'Birthstone', cursive;
+            margin: 0;
+            background: pink;
+        }
+
+        .leftside_text {
+            text-align: left;
+            font-size: 35px;
+            padding-right: 30px;
+            padding-left: 80px;
+            line-height: 1;
+        }
+
+        .central_text {
+            text-align: center;
+            font-size: 35px;
+            line-height: 1;
+        }
+
+        .rightside_text {
+            text-align: right;
+            font-size: 35px;
+            padding-right: 80px;
+            padding-left: 60px;
+            line-height: 1;
+        }
+
+        .main_text {
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .button {
+            border: 5px solid lightpink;
+            background: #FA8072;
+            color: black;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: auto;
+            cursor: pointer;
+            font-family: Arial;
+            font-weight: normal;
+        }
+
+        .header_about_us {
+            padding-top: 10px;
+            margin-bottom: 20px;
+            height: 10%;
+            width: 60%;
+            font-size: 40px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+         .header {
+            padding-top: 10px;
+            background: white;
+            display: inline-block;
+            margin-bottom: 20px;
+            height: 10%;
+            width: 60%;
+            font-size: 40px;
+            border: 5px solid black;
+        }
+
+        .text {
+            padding-top: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+            height: 10%;
+            width: 60%;
+            font-size: 27px;
+            text-align: left;
+            float: left;
+            margin-left: 20px;
+        }
+
+         .description {
+            padding-top: 10px;
+            background: white;
+            display: inline-block;
+            margin-bottom: 20px;
+            height: 10%;
+            width: 60%;
+            font-size: 25px;
+            border: 5px solid #F5A9BC;
+        }
+        .test_content {
+            background: white;
+            display: inline-block;
+            margin-bottom: 20px;
+            width: 60%;
+            font-size: 20px;
+            border: 5px solid #F5A9BC;
+        }
+
+        .questions {
+            font-family: 'Lobster Two', cursive;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            flex-direction: column;
+        }
+
+        .result{
+            background: white;
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+            height: 20%;
+            width: 60%;
+            font-size: 40px;
+            position: absolute;
+            border: 5px solid black;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .button_test {
+            border: 5px solid #f38fa9;
+            background: #ff91af;
+            color: black;
+            font-weight: bold;
+            padding: 12px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .box {
+            background: white;
+            display: inline-block;
+            margin-bottom: 20px;
+            width: 60%;
+            font-size: 20px;
+            border: 5px solid #F5A9BC;
+            padding: 8px;
+        }
+
+        .title {
+            font-size: 32px;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input {
+            width: 40%;
+            margin-bottom: 4px;
+        }
+
+        .programm_item{
+            display: flex;
+            text-align: left;
+            margin-bottom: 24px;
+            background: white;
+            width: 50%;
+            border: 5px solid #F5A9BC;
+            margin-left: 24px;
+        }
+
+        .programm_image {
+            object-fit: cover;
+            width: 280px;
+            height: 230px;
+        }
+
+        .programm_content{
+            padding-left: 8px;
+            font-size: 16pt;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .programm_content > h4 {
+            font-size: 24pt;
+            margin-bottom: 4px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="navigation">
+    <a href="{{ url_for('index') }}"><img src="/static/newlogo.png" height="70px" width="150px"></a>
+    <a href="/about_us">About us</a>
+    <a href="/vocabulary">Vocabulary test</a>
+    <a href="/grammar">Grammar test</a>
+    {% if not current_user.is_authenticated %}
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+    {% endif %}
+    {% if current_user.is_authenticated %}
+    <a href="/profile">Profile</a>
+    <a href="/logout">Logout</a>
+    {% endif %}
+</div>
+<div class="main">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
