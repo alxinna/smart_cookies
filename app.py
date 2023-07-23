@@ -38,7 +38,7 @@ grammar_test = DatabaseManager().get_test('Grammar')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('idex.html')
 
 
 def check_results(result_data, test_data):
@@ -182,7 +182,7 @@ def profile():
 @login_required
 def logout():
     logout_user()
-    return render_template('index.html')
+    return render_template('idex.html')
 
 
 if __name__ == '__main__':
