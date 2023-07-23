@@ -38,7 +38,7 @@ grammar_test = DatabaseManager().get_test('Grammar')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('idex.html')
 
 
 def check_results(result_data, test_data):
@@ -83,6 +83,7 @@ def main_test():
 def about_us():
     return render_template('about_us.html')
 
+
 @app.route('/vocabulary', methods=['GET', 'POST'])
 def vocabulary():
     if request.method == 'POST':
@@ -93,6 +94,7 @@ def vocabulary():
 
         return render_template('result.html', result_information=result_information)
     return render_template('test.html', test=vocabulary_test)
+
 
 @app.route('/grammar', methods=['GET', 'POST'])
 def grammar():
@@ -180,7 +182,7 @@ def profile():
 @login_required
 def logout():
     logout_user()
-    return render_template('index.html')
+    return render_template('idex.html')
 
 
 if __name__ == '__main__':
